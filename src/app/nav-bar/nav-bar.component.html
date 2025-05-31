@@ -1,0 +1,26 @@
+<nav class="nav-bar">
+  <div class="nav-logo-header">
+    <div class="nav-logo">
+      <img [src]="logoSrc" alt="App Logo" class="logo-img" />
+    </div>
+    <span class="nav-header">FUELZY</span>
+  </div>
+  <ul class="nav-items">
+    <li class="nav-item">
+      <span class="nav-icon">📤</span>
+      <span class="nav-label">Upload</span>
+    </li>
+    <li class="nav-item">
+      <span class="nav-icon">📄</span>
+      <span class="nav-label">Documents</span>
+    </li>
+    <li class="nav-item">
+      <span class="nav-icon">⚙️</span>
+      <span class="nav-label">Settings</span>
+    </li>
+  </ul>
+  <div class="nav-bottom">
+    <app-theme-toggle [theme]="theme" (themeChange)="setTheme($event)"></app-theme-toggle>
+    <button class="sign-out-btn" (click)="signOut()">Sign Out</button>
+  </div>
+</nav>

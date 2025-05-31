@@ -1,0 +1,41 @@
+:root {
+  --color-background: var(--color-background-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-text: var(--color-text-dark);
+  --color-button-bg: var(--color-button-bg-dark);
+  --color-button-hover: var(--color-button-hover-dark);
+  --color-file-bg: var(--color-file-bg-dark);
+  --color-status: var(--color-status-dark);
+  --color-background-light: #b2dee4;
+  --color-background-dark: #1a2327;
+  --color-seafoam: #6bdbb6;
+  --color-seafoam-dark: #26a69a;
+  --color-accent: #00796b;
+  --color-surface-light: #ffffffcc;
+  --color-surface-dark: #263238cc;
+  --color-text-light: #222;
+  --color-text-dark: #e0f7fa;
+  --color-button-bg-light: linear-gradient(90deg, #7fffd4 0%, #26a69a 100%);
+  --color-button-bg-dark: linear-gradient(90deg, #26a69a 0%, #00796b 100%);
+  --color-button-hover-light: linear-gradient(90deg, #26a69a 0%, #7fffd4 100%);
+  --color-button-hover-dark: linear-gradient(90deg, #00796b 0%, #26a69a 100%);
+  --color-file-bg-light: #e0f7fa;
+  --color-file-bg-dark: #263238;
+  --color-status-light: #00796b;
+  --color-status-dark: #7fffd4;
+  --font-main: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.1rem;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  --box-shadow-lg: 0 4px 24px rgba(0,0,0,0.08);
+}
+[data-theme="light"] {
+  --color-background: var(--color-background-light);
+  --color-surface: var(--color-surface-light);
+  --color-text: var(--color-text-light);
+  --color-button-bg: var(--color-button-bg-light);
+  --color-button-hover: var(--color-button-hover-light);
+  --color-file-bg: var(--color-file-bg-light);
+  --color-status: var(--color-status-light);
+}

@@ -1,0 +1,103 @@
+@import './vars.css';
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  min-height: 100vh;
+  color: var(--color-text);
+}
+
+h1, h2, h3 {
+  color: var(--color-accent);
+  margin-bottom: 0.5em;
+  font-family: var(--font-main);
+}
+
+.upload-container {
+  background: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-lg);
+  padding: 2rem 1.5rem;
+  max-width: 420px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="file"] {
+  margin-bottom: 1rem;
+  border: 2px solid var(--color-seafoam);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  background: var(--color-file-bg);
+  color: var(--color-accent);
+  font-size: var(--font-size-base);
+  width: 100%;
+  max-width: 320px;
+}
+
+button {
+  background: var(--color-button-bg);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 2rem;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: var(--box-shadow);
+}
+button:disabled {
+  background: #b2dfdb;
+  color: #e0f2f1;
+}
+button:hover:not(:disabled) {
+  background: var(--color-button-hover);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+#file-display {
+  margin: 1.5rem auto 0 auto;
+  min-height: 200px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-file-bg);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+}
+#file-display img {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.upload-status {
+  margin-top: 1rem;
+  color: var(--color-status);
+  font-weight: 500;
+  font-size: var(--font-size-lg);
+}
+
+@media (max-width: 600px) {
+  .upload-container {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+  }
+  #file-display {
+    max-width: 98vw;
+    min-height: 120px;
+    padding: 0.5rem;
+  }
+  input[type="file"] {
+    max-width: 98vw;
+  }
+}
