@@ -1,5 +1,7 @@
-<app-logo [theme]="theme" *ngIf="!showFileUpload" ></app-logo>
 <amplify-authenticator>
+  <ng-template amplifySlot="header">
+    <app-logo [theme]="theme"></app-logo>
+  </ng-template>
   <ng-template
     amplifySlot="authenticated"
     let-user="user"
