@@ -1,0 +1,25 @@
+.auth-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+.auth-logo {
+  max-width: 40%;
+  max-height: 20vw;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
+}
+@media (max-width: 600px) {
+  .auth-logo {
+    max-width: 80%;
+    max-height: 30vw;
+  }
+  .auth-logo-container {
+    margin-top: 0.8rem;
+    margin-bottom: -0.8rem;
+  }
+}

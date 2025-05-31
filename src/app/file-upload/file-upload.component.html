@@ -1,0 +1,29 @@
+<div class="upload-container" 
+     [class.dragover]="isDragOver"
+     (dragover)="onDragOver($event)" 
+     (dragleave)="onDragLeave($event)" 
+     (drop)="onDrop($event)">
+  <ng-container *ngIf="selectedFile && isImage(selectedFile); else showDefault">
+    <img [src]="filePreviewUrl" alt="Selected file preview" class="default-image" style="margin-bottom: 1.2rem;" />
+  </ng-container>
+  <ng-template #showDefault>
+    <img [src]="defaultImageSrc" alt="Default" class="default-image" style="margin-bottom: 1.2rem;" />
+  </ng-template>
+  <div class="file-upload-group">
+    <h2>Choose a File to Upload</h2>
+    <div class="file-input-row">
+      <label for="fileInput" class="file-input-label" [class.selected]="selectedFile">
+        {{ fileInputLabel }}
+      </label>
+      <input type="file" (change)="onFileSelected($event)" id="fileInput" style="display:none;" />
+    </div>
+    <ng-container *ngIf="!selectedFile">
+      <img [src]="dropIconSrc" alt="Drop icon" class="drop-icon" style="margin-bottom: 0.5rem;" />
+      <div class="drop-zone-hint">or drop an image here</div>
+    </ng-container>
+  </div>
+  <div *ngIf="uploadStatus" class="upload-status">
+    {{ uploadStatus }}
+  </div>
+  <button (click)="uploadFile()" [disabled]="!selectedFile" style="margin-top:auto;">Add File</button>
+</div>

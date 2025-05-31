@@ -1,0 +1,41 @@
+@import '../vars.css';
+
+.theme-toggle {
+  background: var(--color-surface);
+  border: 2px solid var(--color-seafoam);
+  border-radius: 20%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+}
+.theme-toggle:focus, .theme-toggle:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+  background: var(--color-seafoam);
+}
+.theme-toggle svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--color-accent);
+}
+@media (max-width: 600px) {
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+  .theme-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+[data-theme="dark"] .theme-toggle {
+  background: var(--color-surface);
+  border-color: var(--color-seafoam-dark);
+}
+[data-theme="dark"] .theme-toggle:focus, [data-theme="dark"] .theme-toggle:hover {
+  background: var(--color-seafoam-dark);
+}
